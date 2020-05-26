@@ -5,7 +5,7 @@ on:
       - master
 
 env:
-  IMAGE_NAME: "homecentr/$$IMAGE_NAME$$"
+  IMAGE_NAME: "homecentr/ddclient"
 
 jobs:
   build:
@@ -41,6 +41,10 @@ jobs:
       - name: Test Docker image
         if: env.RELEASE_VERSION != ''
         run: cd tests && sudo gradle test -Dimage_tag=${{ env.IMAGE_NAME }}:${{ env.RELEASE_VERSION }}
+        env:
+          ZONE: ${{ secrets.CLOUDFLARE_ZONE }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_NS_SERVER: arya.ns.cloudflare.com
       
       - name: Scan with Phonito Security
         if: env.RELEASE_VERSION != ''

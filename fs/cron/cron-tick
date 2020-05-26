@@ -1,0 +1,3 @@
+#!/usr/bin/env ash
+
+ddclient -foreground -file /config/ddclient.conf $DDCLIENT_ARGS

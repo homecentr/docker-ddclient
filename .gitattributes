@@ -1,2 +1,5 @@
 * text=auto
 *.sh         eol=lf
+*/crontick   eol=lf
+*.conf       eol=lf
+*.conf.tmp   eol=lf

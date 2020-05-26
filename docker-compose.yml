@@ -1,6 +1,11 @@
 version: "3.7"
 services:
-  $$IMAGE_NAME$$:
+  ddclient:
     build: .
-    image: homecentr/$$IMAGE_NAME$$
+    image: homecentr/ddclient:local
+    environment:
+      CRON_SCHEDULE: "* * * * *"
+      DDCLIENT_ARGS: "-verbose -debug"
+    volumes:
+      - ./example/ddclient.conf.tmp:/config/ddclient.conf
     restart: unless-stopped
