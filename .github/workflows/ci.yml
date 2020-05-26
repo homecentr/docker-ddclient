@@ -30,11 +30,7 @@ jobs:
         run: docker build . -t ${{ env.IMAGE_NAME }}:${{ steps.vars.outputs.docker_tag }}
 
       - name: Test Docker image
-        run: cd tests && sudo gradle test --info -Dimage_tag=${{ env.IMAGE_NAME }}:${{ steps.vars.outputs.docker_tag }}
-        env:
-          CLOUDFLARE_ZONE: ${{ secrets.CLOUDFLARE_ZONE }}
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_NS_SERVER: arya.ns.cloudflare.com
+        run: cd tests && sudo gradle test --info -Dimage_tag=${{ env.IMAGE_NAME }}:${{ steps.vars.outputs.docker_tag }} -Dcloudflare_zone=${{ secrets.CLOUDFLARE_ZONE }} -Dcloudflare_api_token=${{ secrets.CLOUDFLARE_API_TOKEN }} -Dcloudflare_ns_server=arya.ns.cloudflare.com
 
       - name: Scan with Phonito Security
         uses: phonito/phonito-scanner-action@master

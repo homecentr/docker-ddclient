@@ -24,7 +24,11 @@ dependencies {
 }
 
 test {
-    systemProperty 'image_tag', System.getProperty('image_tag')
+    systemProperty 'docker_image_tag', System.getProperty('docker_image_tag')
+    systemProperty 'cloudflare_zone', System.getProperty('cloudflare_zone')
+    systemProperty 'cloudflare_api_token', System.getProperty('cloudflare_api_token')
+    systemProperty 'cloudflare_ns_server', System.getProperty('cloudflare_ns_server')
+
     afterTest { desc, result ->
         logger.quiet "Executing test ${desc.name} [${desc.className}] with result: ${result.resultType}"
     }

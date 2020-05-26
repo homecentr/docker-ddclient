@@ -21,19 +21,19 @@ public class TestConfiguration {
     }
 
     public String getTargetDomain() {
-        return String.format("%s.ddclient.%s", _targetDomainPrefix, System.getenv("CLOUDFLARE_ZONE"));
+        return String.format("%s.ddclient.%s", _targetDomainPrefix, getZone());
     }
 
     public String getZone() {
-        return System.getenv("CLOUDFLARE_ZONE");
+        return System.getProperty("cloudflare_zone");
     }
 
     public String getCloudflareApiToken() {
-        return System.getenv("CLOUDFLARE_API_TOKEN");
+        return System.getProperty("cloudflare_api_token");
     }
 
     public String getCloudflareNsServer() {
-        return System.getenv("CLOUDFLARE_NS_SERVER");
+        return System.getProperty("cloudflare_ns_server");
     }
 
     public String getExpectedIpAddress() {

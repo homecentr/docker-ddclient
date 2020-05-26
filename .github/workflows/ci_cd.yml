@@ -40,11 +40,7 @@ jobs:
 
       - name: Test Docker image
         if: env.RELEASE_VERSION != ''
-        run: cd tests && sudo gradle test -Dimage_tag=${{ env.IMAGE_NAME }}:${{ env.RELEASE_VERSION }}
-        env:
-          CLOUDFLARE_ZONE: ${{ secrets.CLOUDFLARE_ZONE }}
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_NS_SERVER: arya.ns.cloudflare.com
+        run: cd tests && sudo gradle test -Dimage_tag=${{ env.IMAGE_NAME }}:${{ env.RELEASE_VERSION }} -Dcloudflare_zone=${{ secrets.CLOUDFLARE_ZONE }} -Dcloudflare_api_token=${{ secrets.CLOUDFLARE_API_TOKEN }} -Dcloudflare_ns_server=arya.ns.cloudflare.com
       
       - name: Scan with Phonito Security
         if: env.RELEASE_VERSION != ''
