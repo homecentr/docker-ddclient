@@ -1,3 +1,6 @@
+*.tmp
+
+
 *.class
 *.jar
 *.war
