@@ -1,8 +1,6 @@
-[![Project status](https://img.shields.io/badge/Project%20status-stable%20%26%20actively%20maintaned-green.svg)](https://github.com/homecentr/docker-ddclient/graphs/commit-activity) 
-[![](https://img.shields.io/github/issues-raw/homecentr/docker-ddclient/bug?label=open%20bugs)](https://github.com/homecentr/docker-ddclient/labels/bug) 
-[![](https://images.microbadger.com/badges/version/homecentr/ddclient.svg)](https://hub.docker.com/repository/docker/homecentr/ddclient)
-[![](https://img.shields.io/docker/pulls/homecentr/ddclient.svg)](https://hub.docker.com/repository/docker/homecentr/ddclient) 
-[![](https://img.shields.io/docker/image-size/homecentr/ddclient/latest)](https://hub.docker.com/repository/docker/homecentr/ddclient)
+[![Project status](https://badgen.net/badge/project%20status/stable%20%26%20actively%20maintaned?color=green)](https://github.com/homecentr/docker-ddclient/graphs/commit-activity) [![](https://badgen.net/github/label-issues/homecentr/docker-ddclient/bug?label=open%20bugs&color=green)](https://github.com/homecentr/docker-ddclient/labels/bug) [![](https://badgen.net/github/release/homecentr/docker-ddclient)](https://hub.docker.com/repository/docker/homecentr/ddclient)
+[![](https://badgen.net/docker/pulls/homecentr/ddclient)](https://hub.docker.com/repository/docker/homecentr/ddclient) 
+[![](https://badgen.net/docker/size/homecentr/ddclient)](https://hub.docker.com/repository/docker/homecentr/ddclient)
 
 ![CI/CD on master](https://github.com/homecentr/docker-ddclient/workflows/CI/CD%20on%20master/badge.svg)
 ![Regular Docker image vulnerability scan](https://github.com/homecentr/docker-ddclient/workflows/Regular%20Docker%20image%20vulnerability%20scan/badge.svg)
