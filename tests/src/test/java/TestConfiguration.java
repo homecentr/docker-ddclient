@@ -21,11 +21,11 @@ public class TestConfiguration {
     }
 
     public String getTargetDomain() {
-        return String.format("%s.ddclient.%s", _targetDomainPrefix, System.getenv("ZONE"));
+        return String.format("%s.ddclient.%s", _targetDomainPrefix, System.getenv("CLOUDFLARE_ZONE"));
     }
 
     public String getZone() {
-        return System.getenv("ZONE");
+        return System.getenv("CLOUDFLARE_ZONE");
     }
 
     public String getCloudflareApiToken() {

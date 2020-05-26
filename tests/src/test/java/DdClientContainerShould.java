@@ -45,8 +45,13 @@ public class DdClientContainerShould {
 
     @AfterClass
     public static void after() throws IOException {
-        _container.close();
-        _cloudflareClient.deleteRecord();
+        if(_container != null) {
+            _container.close();
+        }
+
+        if(_cloudflareClient != null) {
+            _cloudflareClient.deleteRecord();
+        }
     }
 
     @Test
