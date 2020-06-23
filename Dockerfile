@@ -13,20 +13,20 @@ RUN chmod a+rx /usr/sbin/ddclient && \
     mkdir /var/cache/ddclient && \
     # Install Perl
     apk add --no-cache \
-      perl=5.30.1-r0 \
+      perl=5.30.3-r0 \
       openssl=1.1.1g-r0 \
       perl-net-ssleay=1.88-r0 \
-      perl-socket6=0.29-r1 && \
+      perl-socket6=0.29-r2 && \
     # Install temporary dependencies required to download and install Perl modules
     apk add --no-cache --virtual cpanm_deps \ 
-      make=4.2.1-r2 \
-      wget=1.20.3-r0 \
-      perl-app-cpanminus=1.7044-r1 \
+      make=4.3-r0 \
+      wget=1.20.3-r1 \
+      perl-app-cpanminus=1.7044-r2 \
       libssl1.1=1.1.1g-r0 \
       openssl-dev=1.1.1g-r0 \
-      gcc=9.2.0-r4 \
-      perl-dev=5.30.1-r0 \
-      musl-dev=1.1.24-r2 && \
+      gcc=9.3.0-r2 \
+      perl-dev=5.30.3-r0 \
+      musl-dev=1.1.24-r9 && \
     # Install required Perl modules (Current version of the libraries can be found on https://metacpan.org/)
     cpanm DROLSKY/Data-Validate-IP-0.27.tar.gz && \
     cpanm SULLR/IO-Socket-SSL-2.068.tar.gz && \
