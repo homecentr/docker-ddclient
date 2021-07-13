@@ -1,4 +1,4 @@
-FROM homecentr/cron-base:1.2.1
+FROM homecentr/cron-base:2.0.0
 
 ARG DDCLIENT_VERSION="3.9.1"
 
